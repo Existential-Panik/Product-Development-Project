@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block body %}
+<!--Login Section Start-->
+<div class="login-section section pt-95 pt-lg-75 pt-md-65 pt-sm-55 pt-xs-45">
+    <div class="container reset">
+        <div class="row">
+
+            <!-- Login -->
+            <div class="col-12 d-flex justify-content-center">
+                <div class="gilbard-login">
+
+                    <h3>Reset your password</h3>
+                    <p>Enter your E-mail address, We will send you a link, through which <br>
+                        you can reset your password.
+                    </p>
+
+                    <!-- Login Form -->
+                    </form>
+                    <form action="{{ url_for('auth_bp.main') }}" method="POST">
+                        <div class="row">
+                            <div class="col-12 mb-30">
+                                {{ form.password(placeholder="Enter your password")}}
+                                <span class="text-danger">{{ form.password.error }} </span>
+
+                            </div>
+                            <div class="col-12 mb-30">
+                                {{ form.confirm_password(placeholder="Enter your confirm password")}}
+                                <span class="text-danger">{{ form.confirm_password.error }} </span>
+                            </div>
+                            {{ form.hidden_tag() }}
+                            <div class="col-12">
+                                {{ form.submit }}
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Login Section End-->
+
+    {% endblock %}
