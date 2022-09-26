@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>FunOlympics Dashboard</title>
+    <link rel="shortcut icon" type="image/x-icon" href="admin/admin/assets/img/favicon.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='admin/assets/plugins/fontawesome/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/assets/plugins/fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/assets/css/feathericon.min.css') }}">
+    <link rel="stylehseet" href="https://cdn.oesmith.co.uk/morris-0.5.1.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/assets/plugins/morris/morris.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin/assets/css/style.css')}}">
+</head>
+
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="{{ url_for('admin_bp.home') }}" class="logo"> <img
+                        src="{{ url_for('static', filename='images/logo.png')}}" width="50" height="70" alt="logo"> </a>
+                <a href="{{ url_for('admin_bp.home') }}" class="logo logo-small"> <img
+                        src="{{ url_for('static', filename='images/small-logo.png')}}" alt="Logo" width="30"
+                        height="30"> </a>
+            </div>
+            <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
+            <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
+            <ul class="nav user-menu">
+                <li class="nav user-menu h-100 d-flex align-items-center">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">{{request.user.name}}</a> 
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ url_for('auth_bp.main') }}">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 696px;">
+                <div class="sidebar-inner slimscroll" style="overflow: hidden; width: 100%; height: 696px;">
+                    <div id="sidebar-menu" class="sidebar-menu">
+                        <ul>
+                            <li class="active"> <a href="{{ url_for('admin_bp.home') }}"><i
+                                        class="fas fa-tachometer-alt"></i>
+                                    <span>Dashboard</span></a> </li>
+                            <li class="list-divider"></li>
+                            <li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Games</span>
+                                    <span class="menu-arrow"></span></a>
+                                <ul class="submenu_class" style="display: none;">
+                                    <li><a href="{{ url_for('admin_bp.allgames_page') }}"> All Games</a></li>
+                                    <li><a href="{{ url_for('admin_bp.addgames_page')}}"> Add Games</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span>Users</span> <span
+                                        class="menu-arrow"></span></a>
+                                <ul class="submenu_class" style="display: none;">
+                                    <li><a href="{{ url_for('admin_bp.allusers_page') }}"> All Users</a></li>
+                                    <!-- <li><a href="{{ url_for('admin_bp.addusers_page') }}"> Add Users</a></li> -->
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="slimScrollBar"
+                    style="background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 385.682px;">
+                </div>
+                <div class="slimScrollRail"
+                    style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                {%block body%}
+
+                {%endblock%}
+            </div>
+        </div>
+        <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+        </script>
+        <script src="{{ url_for('static', filename='admin/assets/js/jquery-3.5.1.min.js')}}"></script>
+        <script src="{{ url_for('static', filename='admin/assets/js/popper.min.js')}}"></script>
+        <script src="{{ url_for('static', filename='admin/assets/js/bootstrap.min.js')}}"></script>
+        <script src="{{ url_for('static', filename='admin/assets/plugins/slimscroll/jquery.slimscroll.min.js') }}">
+        </script>
+        <script src="{{ url_for('static', filename='admin/assets/plugins/raphael/raphael.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='admin/assets/plugins/morris/morris.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='admin/assets/js/chart.morris.js') }}"></script>
+        <script src="{{ url_for('static', filename='admin/assets/js/script.js') }}"></script>
+
+</body>
+
+</html>

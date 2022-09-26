@@ -1,0 +1,66 @@
+﻿{%extends "admin-base.html"%}
+
+{%block body%}
+<div class="page-header">
+	<div class="row align-items-center">
+		<div class="col">
+			<div class="mt-5">
+				<h4 class="card-title float-left mt-2">Game Broadcasts</h4>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 d-flex">
+		<div class="card card-table flex-fill">
+			<div class="card-header">
+				<h4 class="card-title float-left mt-2">Videos</h4>
+				<a href="{{ url_for('admin_bp.addgames_page')}}" class="btn btn-primary float-right veiwbutton ">Add
+					Games</a>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-hover table-center">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Game Category</th>
+								<th>Game URL</th>
+								<th class="text-right sorting" tabindex="0" aria-controls="DataTables_Table_0"
+									rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending"
+									style="width: 52.6786px;">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for game in games %}
+							<tr>
+								<td class="text-nowrap">
+									<div>{{ game.id }}</div>
+								</td>
+								<td class="text-nowrap">{{game.name}}</td>
+								<td>{{ game.url}} </td>
+								<td class="text-right">
+									<div class="dropdown dropdown-action"> <a href="#"
+											class="action-icon dropdown-toggle" data-toggle="dropdown"
+											aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
+										<div class="dropdown-menu dropdown-menu-right"> <a class="dropdown-item"
+												href="{{ url_for('admin_bp.edit_game', id=game.id) }}"><i
+													class="fas fa-pencil-alt m-r-5"></i> Edit</a> 
+												<a class="dropdown-item"
+												href="{{ url_for('admin_bp.delete_game', id=game.id) }}"><i
+													class="fas fa-trash-alt m-r-5"></i> Delete</a></div>
+
+									</div>
+								</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{%endblock%}

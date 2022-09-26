@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Hewitt";
+  src: url("/static/fonts/cooper_hewit/CooperHewitt-Book.ttf") ;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hewitt";
+  src: url("/static/fonts/cooper_hewit/CooperHewitt-Bold.ttf") ;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hewitt";
+  src: url("/static/fonts/cooper_hewit/CooperHewitt-BoldItalic.ttf") ;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hewitt";
+  src: url("/static/fonts/cooper_hewit/CooperHewitt-Semibold.ttf") ;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hewitt";
+  src: url("/static/fonts/cooper_hewit/CooperHewitt-SemiboldItalic.ttf") ;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hewitt";
+  src: url("/static/fonts/cooper_hewit/CooperHewitt-Heavy.ttf") ;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hewitt";
+  src: url("/static/fonts/cooper_hewit/CooperHewitt-HeavyItalic.ttf") ;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hewitt";
+  src: url("/static/fonts/cooper_hewit/CooperHewitt-Medium.ttf") ;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hewitt";
+  src: url("/static/fonts/cooper_hewit/CooperHewitt-MediumItalic.ttf") ;
+  font-weight: 600;
+  font-style: italic;
+}
+

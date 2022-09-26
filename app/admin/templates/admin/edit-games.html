@@ -1,0 +1,54 @@
+{%extends "admin-base.html"%}
+
+{%block body%}
+
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title mt-5">Edit Games</h3>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <form method="POST" enctype="multipart/form-data">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <a class="alert-sucess">{{ message }}</a>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+            {{ form.hidden_tag()}}
+            <div class="row formtype">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        {{ form.name.label}}
+                        {{ form.name(class="form-control") }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        {{ form.url.label}}
+                        {{ form.url(class="form-control")}}
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        {{ form.thumbnail.label }}
+                        <div class="custom-file mb-3">
+                            {{ form.thumbnail(class="custom-file-input" , id="customFile")}}
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary buttonedit">Save</button>
+        </form>
+    </div>
+</div>
+
+{%endblock%}

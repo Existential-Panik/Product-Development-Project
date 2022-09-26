@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+
+{% block body%}
+
+    <!--slider section start-->
+    <div class="hero-section section position-relative">
+        <div class="hero-slider">
+            <!--Hero Item start-->
+            <div class="hero-item hero-item-2" style="background-image: url(https://cdn.discordapp.com/attachments/906483452579299378/1015290069541716009/unknown.png)">
+                <div class="container container-1520">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <!--Hero Content start-->
+                            <div class="hero-content">
+                                <h1>Fun Olympic Games</h1>
+                                <h2>Bayjing 2022</h2>
+                                <a class="df-btn" href="{{ url_for('auth_bp.main') }}">Live now</a>
+                            </div>
+                            <!--Hero Content end-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Hero Item end-->
+            <!--Hero Item start-->
+            <div class="hero-item hero-item-2" style="background-image: url(https://img.olympicchannel.com/images/image/private/f_auto/t_s_pog_overview_hero_xl_2x/v1649062865/primary/n5gcitwteon12zw56gei)">
+                <div class="container container-1520">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <!--Hero Content start-->
+                            <div class="hero-content">
+                                <h1>To Watch Us Live</h1>
+                                <h2>Login or Register Below</h2>
+                                <a class="df-btn" href="{{ url_for('auth_bp.main') }}">LOG IN</a>
+                                <a class="df-btn" href="{{ url_for('auth_bp.signup') }}">REGISTER</a>
+                            </div>
+                            <!--Hero Content end-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Hero Item end-->
+        </div>
+    </div>
+    <!--slider section end-->
+
+        <!--Video Area Start-->
+    <div id="videos" class="video-area section pt-85 pt-lg-65 pt-md-55 pt-sm-55 pt-xs-45">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!--Game Toolbar Start-->
+                    <div class="game-topbar-wrapper d-md-flex justify-content-md-between align-items-center">
+                        <div class="game-search-box">
+                            <h3>Select Games to Watch</h3>
+                            <!-- <input type="text" name="game_search" placeholder="Enter games name">
+                            <button><i class="icofont-search-2"></i></button> -->
+                        </div>
+                         <!--Toolbar Short Area Start-->
+                         <div class="toolbar-short-area d-md-flex align-items-center">
+                             <div class="toolbar-shorter">
+                                <!-- <h3>platform</h3> -->
+                                 <!-- <select class="wide">
+                                     <option data-display="Select">All Platform</option>
+                                     <option value="Relevance">Relevance</option>
+                                     <option value="Name, A to Z">Name, A to Z</option>
+                                     <option value="Name, Z to A">Name, Z to A</option>
+                                     <option value="Price, low to high">Price, low to high</option>
+                                     <option value="Price, high to low">Price, high to low</option>
+                                 </select> -->
+                             </div>
+                             <div class="toolbar-shorter">
+                                <h3>Games</h3>
+                                 <select class="wide">
+                                     <option data-display="Select">All Games</option>
+                                     <option value="Archery">Archery</option>
+                                     <option value="Basketball">Basketball</option>
+                                     <option value="Diving">Diving</option>
+                                     <option value="Fencing">Fencing</option>
+                                     <option value="Surfing">Surfing</option>
+                                     <option value="Volleyball">Volleyball</option>
+                                 </select>
+                             </div>
+                         </div>
+                         <!--Toolbar Short Area End-->
+                    </div>
+                    <!--Game Toolbar End-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <!--Single Video Popup Start-->
+                    <div class="single-video-popup mb-30">
+                        <div class="video-img">
+                            <img src="{{ url_for('static', filename='images/video1.jpg') }}" alt="">
+                            <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=Wy0kxwK3N0o"><i class="icofont-play-alt-2"></i></a>
+                            <div class="video-content">
+                                <h3>need for speed</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single Video Popup End-->
+                </div>
+                <div class="col-md-4">
+                    <!--Single Video Popup Start-->
+                    <div class="single-video-popup mb-30">
+                        <div class="video-img">
+                            <img src="{{ url_for('static', filename='images/video10.jpg') }}" alt="">
+                            <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i class="icofont-play-alt-2"></i></a>
+                            <div class="video-content">
+                                <h3>The Witcher 3</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single Video Popup End-->
+                </div>
+                <div class="col-md-4">
+                    <!--Single Video Popup Start-->
+                    <div class="single-video-popup mb-30">
+                        <div class="video-img">
+                            <img src="{{ url_for('static', filename='images/video4.jpg') }}" alt="">
+                            <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i class="icofont-play-alt-2"></i></a>
+                            <div class="video-content">
+                                <h3>pirets of carabian</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single Video Popup End-->
+                </div>
+                <div class="col-md-4">
+                    <!--Single Video Popup Start-->
+                    <div class="single-video-popup mb-30">
+                        <div class="video-img">
+                            <img src="{{ url_for('static', filename='images/video5.jpg') }}" alt="">
+                            <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i class="icofont-play-alt-2"></i></a>
+                            <div class="video-content">
+                                <h3>battle field 4</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single Video Popup End-->
+                </div>
+                <div class="col-md-4">
+                    <!--Single Video Popup Start-->
+                    <div class="single-video-popup mb-30">
+                        <div class="video-img">
+                            <img src="{{ url_for('static', filename='images/video3.jpg') }}" alt="">
+                            <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i class="icofont-play-alt-2"></i></a>
+                            <div class="video-content">
+                                <h3>batman return</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single Video Popup End-->
+                </div>
+                <div class="col-md-4">
+                    <!--Single Video Popup Start-->
+                    <div class="single-video-popup mb-30">
+                        <div class="video-img">
+                            <img src="{{ url_for('static', filename='images/video2.jpg') }}" alt="">
+                            <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i class="icofont-play-alt-2"></i></a>
+                            <div class="video-content">
+                                <h3>king of magic</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single Video Popup End-->
+                </div>
+                <div class="col-md-4">
+                    <!--Single Video Popup Start-->
+                    <div class="single-video-popup mb-30">
+                        <div class="video-img">
+                            <img src="{{ url_for('static', filename='images/video6.jpg') }}" alt="">
+                            <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i class="icofont-play-alt-2"></i></a>
+                            <div class="video-content">
+                                <h3>pirets of carabian</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single Video Popup End-->
+                </div>
+                <div class="col-md-4">
+                    <!--Single Video Popup Start-->
+                    <div class="single-video-popup mb-30">
+                        <div class="video-img">
+                            <img src="{{ url_for('static', filename='images/video7.jpg') }}" alt="">
+                            <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i class="icofont-play-alt-2"></i></a>
+                            <div class="video-content">
+                                <h3>soad adventure</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Single Video Popup End-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Video Area End-->
+
+{% endblock %}
+
+
+
+

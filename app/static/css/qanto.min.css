@@ -1,0 +1,48 @@
+@font-face {
+    font-family: '';
+    src: url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//.eot');
+    src: url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//.eot?#iefix') format('embedded-opentype'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//.woff2') format('woff2'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//.woff') format('woff'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//.ttf') format('truetype'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//.svg#') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '';
+    src: url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_1.eot');
+    src: url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_1.eot?#iefix') format('embedded-opentype'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_1.woff2') format('woff2'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_1.woff') format('woff'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_1.ttf') format('truetype'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_1.svg#') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '';
+    src: url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_2.eot');
+    src: url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_2.eot?#iefix') format('embedded-opentype'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_2.woff2') format('woff2'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_2.woff') format('woff'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_2.ttf') format('truetype'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_2.svg#') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '';
+    src: url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_3.eot');
+    src: url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_3.eot?#iefix') format('embedded-opentype'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_3.woff2') format('woff2'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_3.woff') format('woff'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_3.ttf') format('truetype'),
+        url('https://demo.hasthemes.com/gilbard-preview/gilbard/assets/fonts//_3.svg#') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
