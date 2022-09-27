@@ -41,3 +41,7 @@ def signup():
 @auth_bp.route("/forgot_password", methods=["GET", "POST"])
 def forgot_pass():
     return render_template("forgot_password.html", title="forgot password")
+
+@auth_bp.route("/reset", methods=["GET", "POST"])
+def reset_pass():
+    return render_template("reset.html", title="forgot password")

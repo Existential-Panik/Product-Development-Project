@@ -192,6 +192,7 @@ ul {
 
 img {
   max-width: 100%;
+  height: 250px;
 }
 
 /*-- 
@@ -3855,7 +3856,7 @@ text-shadow: 5px 4px 2px #21573d;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(50, 50, 50, 0.4);
 }
 
 .single-video-popup .video-img a.video-btn {
@@ -3869,7 +3870,7 @@ text-shadow: 5px 4px 2px #21573d;
   text-align: center;
   font-size: 45px;
   line-height: 45px;
-  color: #d42d2d;
+  color: #fc4e4e;
 }
 
 @media only screen and (max-width: 767px) {
