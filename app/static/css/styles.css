@@ -3823,7 +3823,7 @@ text-shadow: 5px 4px 2px #21573d;
 
 @media only screen and (min-width: 1200px) and (max-width: 1499px) {
   .video-area {
-    margin-bottom: -5px;
+    margin-bottom: 100px;
   }
 }
 
