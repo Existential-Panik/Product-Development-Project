@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+<!--Login Section Start-->
+<div class="login-section section pt-95 pt-lg-75 pt-md-65 pt-sm-55 pt-xs-45">
+    <div class="container reset">
+        <div class="row">
+
+            <!-- Login -->
+            <div class="col-12 d-flex justify-content-center">
+                <div class="gilbard-login">
+
+                    <h3>OTP Reset</h3>
+                    <p>Enter your OTP we sent yo your email, after which <br>
+                        you will be able to reset your password.
+                    </p>
+
+                    <!-- Login Form -->
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-12 mb-30"><input type="text" placeholder="Enter your OTP"></div>
+
+                            <div class="col-12"><input type="submit" value="Submit"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Login Section End-->
+
+    {% endblock %}

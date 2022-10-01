@@ -44,4 +44,8 @@ def forgot_pass():
 
 @auth_bp.route("/reset", methods=["GET", "POST"])
 def reset_pass():
-    return render_template("reset.html", title="forgot password")
+    return render_template("reset.html")
+
+@auth_bp.route("/otp_page", methods=["GET", "POST"])
+def otp_page():
+    return render_template("otp_page.html")
