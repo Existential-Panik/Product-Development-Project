@@ -3,10 +3,11 @@ from app.general.general import general_bp
 from app.auth.auth import auth_bp
 from app.admin.admin import admin_bp
 from flask_migrate import Migrate
+from .utils.email import mail
 
 from app.request import Request
 from .models import db, User
-import os
+from app.config import Config
 
 
 config = Flask.default_config
@@ -21,13 +22,13 @@ class OlympicApp(Flask):
         super(OlympicApp, self).__init__(__name__, *args, **kwargs)
 
 
-DATABASE = os.path.join(os.path.dirname(__file__), "site.db")
 migrate = Migrate()
 
 
 def create_app():
     app = OlympicApp()
-    app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DATABASE}"
+    app.config.from_object(Config)
+    mail.init_app(app)
     db.init_app(app)
     migrate.init_app(app, db)
     with app.app_context():

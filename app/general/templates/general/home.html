@@ -65,15 +65,6 @@
                     <!--Toolbar Short Area Start-->
                     <div class="toolbar-short-area d-md-flex align-items-center">
                         <div class="toolbar-shorter">
-                            <!-- <h3>platform</h3> -->
-                            <!-- <select class="wide">
-                                     <option data-display="Select">All Platform</option>
-                                     <option value="Relevance">Relevance</option>
-                                     <option value="Name, A to Z">Name, A to Z</option>
-                                     <option value="Name, Z to A">Name, Z to A</option>
-                                     <option value="Price, low to high">Price, low to high</option>
-                                     <option value="Price, high to low">Price, high to low</option>
-                                 </select> -->
                         </div>
                         <div class="toolbar-shorter">
                             <h3>Games</h3>
@@ -88,167 +79,102 @@
                             </select>
                         </div>
                     </div>
-                    <!--Toolbar Short Area End-->
                 </div>
-                <!--Game Toolbar End-->
             </div>
         </div>
         <div class="row">
+            {% for game in games %}
             <div class="col-md-4">
                 <!--Single Video Popup Start-->
                 <div class="single-video-popup mb-30">
                     <div class="video-img">
-                        <img src="{{ url_for('static', filename='images/video1.jpg') }}" alt="">
-                        <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=R7PYdSKm00U"><i
+                        <img src="{{ url_for('static', filename='uploads/'+game.thumbnail ) }}" alt="Video for {{ game.name}}">
+                        <a class="video-popup video-btn" href="{{ game.url }}"><i
                                 class="icofont-play-alt-2"></i></a>
                         <div class="video-content">
-                            <h3>Basketball</h3>
+                            <h3> {{ game.name }}</h3>
                         </div>
                     </div>
                 </div>
                 <!--Single Video Popup End-->
             </div>
-            <div class="col-md-4">
-                <!--Single Video Popup Start-->
-                <div class="single-video-popup mb-30">
-                    <div class="video-img">
-                        <img src="{{ url_for('static', filename='images/video2.jpg') }}" alt="">
-                        <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i
-                                class="icofont-play-alt-2"></i></a>
-                        <div class="video-content">
-                            <h3>Archery</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Single Video Popup End-->
-            </div>
-            <div class="col-md-4">
-                <!--Single Video Popup Start-->
-                <div class="single-video-popup mb-30">
-                    <div class="video-img">
-                        <img src="{{ url_for('static', filename='images/video3.jpg') }}" alt="">
-                        <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i
-                                class="icofont-play-alt-2"></i></a>
-                        <div class="video-content">
-                            <h3>Surfing</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Single Video Popup End-->
-            </div>
-            <div class="col-md-4">
-                <!--Single Video Popup Start-->
-                <div class="single-video-popup mb-30">
-                    <div class="video-img">
-                        <img src="{{ url_for('static', filename='images/video4.jpg') }}" alt="">
-                        <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i
-                                class="icofont-play-alt-2"></i></a>
-                        <div class="video-content">
-                            <h3>Fencing</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Single Video Popup End-->
-            </div>
-            <div class="col-md-4">
-                <!--Single Video Popup Start-->
-                <div class="single-video-popup mb-30">
-                    <div class="video-img">
-                        <img src="{{ url_for('static', filename='images/video5.jpg') }}" alt="">
-                        <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i
-                                class="icofont-play-alt-2"></i></a>
-                        <div class="video-content">
-                            <h3>Diving</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Single Video Popup End-->
-            </div>
-            <div class="col-md-4">
-                <!--Single Video Popup Start-->
-                <div class="single-video-popup mb-30">
-                    <div class="video-img">
-                        <img src="{{ url_for('static', filename='images/video6.jpg') }}" alt="">
-                        <a class="video-popup video-btn" href="https://www.youtube.com/watch?v=g4rYh3e97VU"><i
-                                class="icofont-play-alt-2"></i></a>
-                        <div class="video-content">
-                            <h3>Volleyball</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Single Video Popup End-->
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
 <!--Video Area End-->
 <!--Video section start-->
-    <div class="video-section section pb-135 pb-lg-115 pb-md-105 pb-sm-95 pb-xs-85">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-12">
-                    <!--Featured Title Start-->
-                    <div class="featured-title">
-                        <h2>Upcoming Events</h2>
-                    </div>
-                    <!--Featured Title End-->
+<div class="video-section section pb-135 pb-lg-115 pb-md-105 pb-sm-95 pb-xs-85">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <!--Featured Title Start-->
+                <div class="featured-title">
+                    <h2>Upcoming Events</h2>
                 </div>
+                <!--Featured Title End-->
             </div>
-            <div class="row no-gutters align-items-end">
-                <div class="col-12">
-                    <div class="video-slider-active">
-                        <div class="single-video">
-                            <div class="video-img video-img-2">
-                                <img src="{{ url_for('static', filename='images/video7.jpg') }}" alt="">
-                                <div class="video-content content-center">
+        </div>
+        <div class="row no-gutters align-items-end">
+            <div class="col-12">
+                <div class="video-slider-active">
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{{ url_for('static', filename='images/video7.jpg') }}" alt="">
+                            <div class="video-content content-center">
                                 <h3>Boxing</h3>
-                                    <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i class="icofont-play-alt-2"></i> view demo</a>
-                                </div>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
                             </div>
                         </div>
-                        <div class="single-video">
-                            <div class="video-img video-img-2">
-                                <img src="{{ url_for('static', filename='images/video8.jpeg') }}" alt="">
-                                <div class="video-content content-center">
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{{ url_for('static', filename='images/video8.jpeg') }}" alt="">
+                            <div class="video-content content-center">
                                 <h3>Figure Skating</h3>
-                                    <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i class="icofont-play-alt-2"></i> view demo</a>
-                                </div>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
                             </div>
                         </div>
-                        <div class="single-video">
-                            <div class="video-img video-img-2">
-                                <img src="{{ url_for('static', filename='images/video9.jpg') }}" alt="">
-                                <div class="video-content content-center">
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{{ url_for('static', filename='images/video9.jpg') }}" alt="">
+                            <div class="video-content content-center">
                                 <h3>Ice Hockey</h3>
-                                    <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i class="icofont-play-alt-2"></i> view demo</a>
-                                </div>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
                             </div>
                         </div>
-                        <div class="single-video">
-                            <div class="video-img video-img-2">
-                                <img src="{{ url_for('static', filename='images/video10.jpg') }}" alt="">
-                                <div class="video-content content-center">
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{{ url_for('static', filename='images/video10.jpg') }}" alt="">
+                            <div class="video-content content-center">
                                 <h3>Karate</h3>
-                                    <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i class="icofont-play-alt-2"></i> view demo</a>
-                                </div>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
                             </div>
                         </div>
-                        <div class="single-video">
-                            <div class="video-img video-img-2">
-                                <img src="{{ url_for('static', filename='images/video11.jpeg') }}" alt="">
-                                <div class="video-content content-center">
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{{ url_for('static', filename='images/video11.jpeg') }}" alt="">
+                            <div class="video-content content-center">
                                 <h3>Snowboarding</h3>
-                                    <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i class="icofont-play-alt-2"></i> view demo</a>
-                                </div>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
                             </div>
                         </div>
-                        <div class="single-video">
-                            <div class="video-img video-img-2">
-                                <img src="{{ url_for('static', filename='images/video12.jpg') }}" alt="">
-                                <div class="video-content content-center">
+                    </div>
+                    <div class="single-video">
+                        <div class="video-img video-img-2">
+                            <img src="{{ url_for('static', filename='images/video12.jpg') }}" alt="">
+                            <div class="video-content content-center">
                                 <h3>Swimming</h3>
-                                    <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i class="icofont-play-alt-2"></i> view demo</a>
-                                </div>
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i
+                                        class="icofont-play-alt-2"></i> view demo</a>
                             </div>
                         </div>
                     </div>
@@ -256,5 +182,6 @@
             </div>
         </div>
     </div>
-    <!--Video section start-->
+</div>
+<!--Video section start-->
 {% endblock %}

@@ -1,16 +1,14 @@
 ## Installation
 
 ```sh
-pip install -r requirements.txt
+make install
 ```
 
 ## How to Run
 
-```
-export FLASK_APP=app.py
-export FLASK_ENV=development
+```sh
+make run
 ```
 
-## Production Link
 
-https://flaskecommerceapp.herokuapp.com
+

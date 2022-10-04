@@ -19,14 +19,29 @@
                     <!-- Login Form -->
                     <form action="{{ url_for('auth_bp.main') }}" method="POST">
                         <div class="row">
+                            {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                            <div class="col-12 mb-30 w-100 h-100">
+                            <ul class="w-100 h-100">
+                            {% for message in messages %}
+                                <li>
+                                    <a class="alert alert-danger w-100">{{ message }}</a>
+
+                                </li>
+                            {% endfor %}
+                            </ul>
+                            </div>
+                            {% endif %}
+                            {% endwith %}
+
                             <div class="col-12 mb-30">
-                                {{ form.email(placeholder="Enter  your email ")}}
+                                {{ form.email(placeholder="Enter  your email " , type="email")}}
                                 <span class="text-danger"> {{ " ".join(form.email.errors) }} </span>
-                                </div>
+                            </div>
                             <div class="col-12 mb-20">
                                 {{ form.password(placeholder="Enter your password") }}
                                 <span class="text-danger"> {{ " ".join(form.password.errors) }} </span>
-                                </div>
+                            </div>
                             <div class="col-12 mb-15">
                                 <a href="{{ url_for('auth_bp.forgot_pass') }}">Forgotten password?</a>
                             </div>

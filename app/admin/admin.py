@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 import os.path
-from .forms import UpdateUserForm, VideoForm
+from .forms import AddUserForm, UpdateUserForm, VideoForm
 from app.auth.forms import RegistrationForm
 from werkzeug.utils import secure_filename
 from app.models import Game, db, User
@@ -82,11 +82,26 @@ def allusers_page():
     return render_template("all-users.html", users=users)
 
 
-@admin_bp.route("/users/add")
+@admin_bp.route("/users/add", methods=["GET", "POST"])
 def addusers_page():
-    return render_template(
-        "add-users.html",
-    )
+    form = AddUserForm()
+
+    if request.method == "POST":
+        if form.validate_on_submit():
+            email = form.email.data
+            password = form.password.data
+            name = form.name.data
+            is_admin = True if form.is_admin.data == "admin" else False
+            new_user = User(
+                email=email, password=password, name=name, is_admin=is_admin
+            )
+            db.session.add(new_user)
+            db.session.commit()
+            return redirect(url_for("admin_bp.allusers_page"))
+        else:
+            print("not validated", form.__dict__)
+
+    return render_template("add-users.html", form=form)
 
 
 @admin_bp.route("/users/edit/<int:id>", methods=["GET", "POST"])

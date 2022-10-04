@@ -8,6 +8,7 @@ from flask import (
     redirect,
     request,
 )
+from app.models import Game
 
 
 general_bp = Blueprint(
@@ -20,11 +21,8 @@ general_bp = Blueprint(
 
 @general_bp.before_request
 def check_is_user_authenticated():
-    print(f"request {request}")
     if not request.is_authenticated:
-        redirect(url_for("auth_bp.main"))
-    else:
-        redirect(url_for("general_bp.home"))
+        return redirect(url_for("auth_bp.main"))
 
 
 @general_bp.route("/logout")
@@ -35,7 +33,8 @@ def logout():
 
 @general_bp.route("/")
 def home():
-    return render_template("home.html", title="Home")
+    games = Game.query.all()
+    return render_template("home.html", games=games)
 
 
 @general_bp.route("/404")
