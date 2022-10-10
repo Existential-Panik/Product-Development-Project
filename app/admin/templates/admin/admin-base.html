@@ -33,7 +33,7 @@
                 <li class="nav user-menu h-100 d-flex align-items-center">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">{{request.user.name}}</a> 
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{ url_for('auth_bp.main') }}">Logout</a>
+                        <a class="dropdown-item" href="{{ url_for('general_bp.logout') }}">Logout</a>
                     </div>
                 </li>
             </ul>
