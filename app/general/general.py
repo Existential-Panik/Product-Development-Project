@@ -22,7 +22,7 @@ general_bp = Blueprint(
 @general_bp.route("/logout")
 def logout():
     session.clear()
-    return "You are logged out"
+    return redirect(url_for(".home"))
 
 
 @general_bp.route("/")
