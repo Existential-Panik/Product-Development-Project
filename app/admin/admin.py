@@ -23,8 +23,17 @@ def check_is_admin():
 
 @admin_bp.route("/")
 def home():
+    users_count = User.query.count()
+    games_count = Game.query.count()
     users = User.query.all()
-    return render_template("admin.html", users=users)
+    games = Game.query.all()
+    return render_template(
+        "admin.html",
+        users_count=users_count,
+        games_count=games_count,
+        users=users,
+        games=games,
+    )
 
 
 @admin_bp.route("/games/all")

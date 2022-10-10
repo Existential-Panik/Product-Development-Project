@@ -1,4 +1,5 @@
 from flask_mail import Message
+from app.config import Config
 from flask import (
     Blueprint,
     render_template,
@@ -76,7 +77,7 @@ def forgot_pass():
                 url = url_for(".reset_pass", code=code, email=user.email)
                 msg = Message(
                     f"{user.name}",
-                    sender="62b4e50446f34e@mailtrap.io",
+                    sender=f"{Config.MAIL_USERNAME}@mailtrap.io",
                     recipients=[user.email],
                 )
                 msg.html = render_template(

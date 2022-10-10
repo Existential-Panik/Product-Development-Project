@@ -19,10 +19,10 @@ general_bp = Blueprint(
 )
 
 
-@general_bp.before_request
-def check_is_user_authenticated():
-    if not request.is_authenticated:
-        return redirect(url_for("auth_bp.main"))
+# @general_bp.before_request
+# def check_is_user_authenticated():
+#     if not request.is_authenticated:
+#         return redirect(url_for("auth_bp.main"))
 
 
 @general_bp.route("/logout")

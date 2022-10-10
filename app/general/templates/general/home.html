@@ -2,10 +2,8 @@
 
 {% block body%}
 
-<!--slider section start-->
 <div class="hero-section section position-relative">
     <div class="hero-slider">
-        <!--Hero Item start-->
         <div class="hero-item hero-item-2"
             style="background-image: url(https://cdn.discordapp.com/attachments/906483452579299378/1015290069541716009/unknown.png)">
             <div class="container container-1520">
@@ -45,60 +43,54 @@
                 </div>
             </div>
         </div>
-        <!--Hero Item end-->
     </div>
 </div>
-<!--slider section end-->
-
-<!--Video Area Start-->
 <div id="videos" class="video-area section pt-85 pt-lg-65 pt-md-55 pt-sm-55 pt-xs-45">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <!--Game Toolbar Start-->
                 <div class="game-topbar-wrapper d-md-flex justify-content-md-between align-items-center">
                     <div class="game-search-box">
                         <h3>Select Games to Watch</h3>
-                        <!-- <input type="text" name="game_search" placeholder="Enter games name">
-                            <button><i class="icofont-search-2"></i></button> -->
                     </div>
-                    <!--Toolbar Short Area Start-->
                     <div class="toolbar-short-area d-md-flex align-items-center">
                         <div class="toolbar-shorter">
                         </div>
                         <div class="toolbar-shorter">
                             <h3>Games</h3>
-                            <select class="wide">
-                                <option data-display="Select">All Games</option>
-                                <option value="Archery">Archery</option>
-                                <option value="Basketball">Basketball</option>
-                                <option value="Diving">Diving</option>
-                                <option value="Fencing">Fencing</option>
-                                <option value="Surfing">Surfing</option>
-                                <option value="Volleyball">Volleyball</option>
+                            <select class="wide" id="game-select">
+                                <option value="all">All Games</option>
+                            {% for game in games%}
+                                <option value="{{ game.name }}">{{ game.name }} </option>
+                            {% endfor %}
                             </select>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row games-list">
             {% for game in games %}
-            <div class="col-md-4">
+            <div class="col-md-4" data-name="{{game.name}}">
                 <!--Single Video Popup Start-->
                 <div class="single-video-popup mb-30">
                     <div class="video-img">
                         <img src="{{ url_for('static', filename='uploads/'+game.thumbnail ) }}" alt="Video for {{ game.name}}">
+            {% if request.is_authenticated %}
                         <a class="video-popup video-btn" href="{{ game.url }}"><i
                                 class="icofont-play-alt-2"></i></a>
+            {% else %}
+                        <a class="video-btn" href="{{ url_for('auth_bp.main')}}"><i
+                                class="icofont-play-alt-2"></i></a>
+            {% endif %}
                         <div class="video-content">
                             <h3> {{ game.name }}</h3>
                         </div>
                     </div>
                 </div>
-                <!--Single Video Popup End-->
             </div>
             {% endfor %}
+
         </div>
     </div>
 </div>
@@ -183,5 +175,6 @@
         </div>
     </div>
 </div>
+    <script src="{{url_for('static' , filename='js/custom.js')}}"></script>
 <!--Video section start-->
 {% endblock %}

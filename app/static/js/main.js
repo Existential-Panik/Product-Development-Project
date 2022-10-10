@@ -314,8 +314,6 @@ $('#summernote').summernote({
     focus: true 
 });    
 
-// Nice Select Active
-$('select').niceSelect();   
     
 /*----------------------------------- 
     Game Tab Slider Active 
