@@ -2,11 +2,7 @@ const gamesEl = document.querySelector(".games-list");
 const gamesList = Array.from(gamesEl.children);
 
 const selectEl = document.getElementById("game-select");
-console.log(selectEl);
 
-const getAsccci = (string) => {
-  return string.split("").map((char) => char.charCodeAt(0));
-};
 
 selectEl.addEventListener("change", (e) => {
   const selectedValue = e.target.value;
