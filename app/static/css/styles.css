@@ -4329,10 +4329,6 @@ text-shadow: 5px 4px 2px #21573d;
   box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.05);
 }
 
-.news-latter-area.newslatter-black {
-  background-color: #081b1f;
-  background-image: url(../images/bg/news-bg-2.png);
-}
 
 @media only screen and (max-width: 767px) {
   .news-latter-area.newslatter-black {
