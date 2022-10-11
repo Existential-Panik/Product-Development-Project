@@ -14,7 +14,11 @@
                         <div class="hero-content">
                             <h1>Fun Olympic Games</h1>
                             <h2>Bayjing 2022</h2>
+                            {% if request.is_authenticated %}
+                            <a class="df-btn video-popup" href="https://www.youtube.com/watch?v=1CVIG6oAT70">Live now</a>
+                            {% else %}
                             <a class="df-btn" href="{{ url_for('auth_bp.main') }}">Live now</a>
+                            {% endif %}
                         </div>
                         <!--Hero Content end-->
 
@@ -115,7 +119,7 @@
                             <img src="{{ url_for('static', filename='images/video7.jpg') }}" alt="">
                             <div class="video-content content-center">
                                 <h3>Boxing</h3>
-                                <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=WqGjDurAHQo"><i
                                         class="icofont-play-alt-2"></i> view demo</a>
                             </div>
                         </div>
@@ -125,7 +129,7 @@
                             <img src="{{ url_for('static', filename='images/video8.jpeg') }}" alt="">
                             <div class="video-content content-center">
                                 <h3>Figure Skating</h3>
-                                <a class="video-popup" href="https://www.youtube.com/watch?v=BjiaMBk6rHk"><i
+                                <a class="video-popup" href="https://www.youtube.com/watch?v=Ex6OjrIC5-g"><i
                                         class="icofont-play-alt-2"></i> view demo</a>
                             </div>
                         </div>
